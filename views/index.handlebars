@@ -1,0 +1,31 @@
+{{!-- This is the main display of all the data --}}
+
+{{> nav/nav_block}}
+{{> nav/jumbotron}}
+
+{{#each articles}}
+
+    {{> articles/articles_display}}
+
+{{else}}
+
+        <div class="card mt-3 mb-3">
+            <div class="card-header container-fluid text-white bg-warning">
+                <h4 class="text-center">Uh Oh. Looks like we don't have any new articles.</h4>
+            </div>
+        </div>
+
+        <div class="card mb-3 text-center">
+            <div class="card-header container-fluid text-white bg-primary">
+                <h4 class="text-center">What would you like to do?</h4>
+            </div>
+            <div class="card-body">
+                <a href="/api/scrape">Try Scraping New Articles</a><br>
+                <a href="/saved">Go to Saved Articles</a>
+
+            </div>
+        </div>
+
+{{/each}}
+
+

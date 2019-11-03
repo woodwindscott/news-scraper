@@ -1,0 +1,27 @@
+{{> nav/nav_block}}
+{{> nav/jumbotron}}
+
+{{#each articles}}
+
+    {{> articles/saved_articles_display}}
+    {{> modals/notes_modal}}
+
+{{else}}
+
+        <div class="card mt-3 mb-3">
+            <div class="card-header container-fluid text-white bg-warning">
+                <h4 class="text-center">Uh Oh. Looks like we don't have any saved articles.</h4>
+            </div>
+        </div>
+
+        <div class="card mb-3 text-center">
+            <div class="card-header container-fluid text-white bg-primary">
+                <h4 class="text-center">Would You Like to Browse Available Articles?</h4>
+            </div>
+            <div class="card-body">
+                <a href="/">Browse Articles</a>
+            </div>
+        </div>
+
+{{/each}}
+

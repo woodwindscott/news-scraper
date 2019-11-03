@@ -1,0 +1,19 @@
+{{!-- This will handle the status of the burger based on whether or not it is "devoured" --}}
+<div>
+
+	{{!-- If already devoured, no need for a button, and target the class for CSS --}}
+	{{#if devoured}} 
+		<p class="eaten">
+			{{burger_name}}
+		</p>
+	{{else}}
+		{{!-- If not already devoured, create a button for user to click and "eat" --}}
+		<p class="not-eaten">
+			{{burger_name}}
+			<button class="eat-burger" data-id="{{id}}">
+				Devour It!
+			</button>
+		</p>
+	{{/if}}
+
+</div>

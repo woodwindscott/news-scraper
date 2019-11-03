@@ -1,0 +1,25 @@
+{{!-- This will display all of the articles that are not saved --}}
+<div>
+
+    {{#unless isSaved}}
+        <div class="card mb-3">
+            <div class="card-header container-fluid text-white bg-primary">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>{{headline}}</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="save btn btn-success text-white" data-id="{{_id}}">
+		                    SAVE ARTICLE
+	                     </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{summary}}</h5>
+                <a href="{{link}}" target="_blank" class="btn btn-secondary">View Full Article</a>
+            </div>
+        </div>
+    {{/unless}}
+
+</div>

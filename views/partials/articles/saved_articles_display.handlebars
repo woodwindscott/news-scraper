@@ -1,0 +1,30 @@
+{{!-- This will display all of the articles that are saved --}}
+<div>
+
+    {{#if isSaved}}
+        <div class="card mb-3">
+            <div class="card-header container-fluid text-white bg-primary">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>{{headline}}</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="unsave btn btn-danger text-white" data-id="{{_id}}">
+		                    DELETE FROM SAVED
+	                     </button>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="notes btn btn-warning text-white" data-id="{{_id}}">
+		                    ARTICLE NOTES
+	                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{summary}}</h5>
+                <a href="{{link}}" target="_blank" class="btn btn-secondary">View Full Article</a>
+            </div>
+        </div>
+    {{/if}}
+
+</div>
