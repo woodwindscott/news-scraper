@@ -5,6 +5,11 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 const mongoose = require('mongoose');
 
+// If deployed, use the deployed database.  Otherwise use the local newsScraper database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraper";
+
+mongoose.connect(MONGODB_URI);
+
 var PORT = process.env.PORT || 8020;
 
 // Configure Express
