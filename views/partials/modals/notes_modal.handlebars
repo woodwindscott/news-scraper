@@ -12,21 +12,22 @@
 
                 {{!-- TODO: --}}
 
-                {{#each notes}}
+                {{!-- {{#each notes}} --}}
                     <div class="display-note">
                         <div class="row">
                             <div class="col-md-10">
-                                ID: {{_id}}<br>
-                                Inside notes display: {{body}}
-                                {{!-- ID: {{notes._id}}<br>
-                                Inside notes display: {{notes.body}} --}}
+                                {{!-- ID: {{_id}}<br>
+                                Inside notes display: {{body}} --}}
+                                ID: {{notes._id}}<br>
+                                {{!-- Inside notes display:  --}}
+                                {{notes.body}}
                             </div>
                             <div class="col-md-2">
                                 <button type="button" class="btn btn-danger delete-note">X</button>
                             </div>
                         </div>
                     </div>
-                {{/each}}
+                {{!-- {{/each}} --}}
 
                 {{!-- End TODO: --}}
 

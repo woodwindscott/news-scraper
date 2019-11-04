@@ -36,14 +36,13 @@ $(document).ready(function () {
         );
     });
 
-
-
     // Opens the "notes" modal when clicked from the saved articles page
     $(".notes").on("click", function(event) {
         var id = $(this).attr("data-id");
         console.log(id);
         $("#view-notes").modal();
     
+        // Adds a new note when clicked
         $("#new-note").on("click", function(event) {
             event.preventDefault();
 
@@ -71,8 +70,6 @@ $(document).ready(function () {
             } // End else statement
         });
     });
-
-
 
     // Removes an article from saved when button is clicked
     $(".unsave").on("click", function(event) {
