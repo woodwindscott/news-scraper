@@ -1,7 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(document).ready(function () {
 
-    // Goes to scrape articles when button is clicked
+    // Goes to scrape articles when button is clicked 
     $("#scrape").on("click", function(event) {
 
         // Send the GET request.
